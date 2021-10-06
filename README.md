@@ -1,9 +1,6 @@
-# Fabric Example Mod
+# Fettlol Library
 
-## Setup
+> Note: This is very much still a **Work in Progress** and will most likely not be useful to anybody.
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Long-term ambitions for this project is to create a library that the various `fettlol` mods can include during build
+to reduce the need for duplicated code in the various mods. For now, it does absolutely nothing.
