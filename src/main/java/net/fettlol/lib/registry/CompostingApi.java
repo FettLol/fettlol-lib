@@ -1,4 +1,4 @@
-package net.fettlol.lib.api;
+package net.fettlol.lib.registry;
 
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.item.Item;
@@ -7,7 +7,7 @@ import net.minecraft.util.registry.Registry;
 
 import java.util.Optional;
 
-public final class FettlolAPI {
+public final class CompostingApi {
 
     /**
      * Add an item to the CompostingChanceRegistry.

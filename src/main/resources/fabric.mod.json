@@ -1,16 +1,14 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fettlol-lib",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "Me!"
-  ],
+  "name": "Fettlol Library",
+  "description": "Library for the Fettlol mod family",
+  "authors": ["Breki Tomasson"],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/fettlol/fettlol-lib"
   },
 
   "license": "CC0-1.0",

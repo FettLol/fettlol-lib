@@ -4,6 +4,8 @@
   "package": "net.fettlol.lib.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "RecipeManagerMixin",
+    "TagGroupLoaderMixin"
   ],
   "client": [
   ],
