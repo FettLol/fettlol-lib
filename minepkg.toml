@@ -1,0 +1,28 @@
+
+# Preview of the minepkg.toml format! Could break anytime!
+manifestVersion = 0
+
+[package]
+  type = "mod"
+  name = "fettlol-lib"
+  description = "Library for the Fettlol mod family."
+  version = "1.0.6"
+  platform = "fabric"
+  license = "MIT"
+  source = "https://github.com/fettlol/fettlol-lib"
+  homepage = "https://fabricmc.net/"
+  author = "Breki Tomasson"
+
+# These are global requirements
+[requirements]
+  minecraft = "1.17.1"
+  fabricLoader = ">=0.11.7"
+
+[dependencies]
+  fabric = "*"
+
+[dev]
+  buildCommand = "./gradlew build"
+
+  [dev.dependencies]
+    test-mansion = "*"
