@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fettlol.lib.Lib"
+      "net.fettlol.lib.FettlolLib"
     ]
   },
   "mixins": [

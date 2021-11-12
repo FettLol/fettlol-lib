@@ -17,13 +17,16 @@ public class TagApi {
 
     public static final Map<Identifier, Set<Identifier>> FETTLOL_ITEM_TAGS = new HashMap<>();
 
-    public static Tag.Identified<Item> makeItemTag(String name) {
-        Identifier id = new Identifier(name);
-        return TagFactory.ITEM.create(id);
+    public static Tag<Item> makeItemTag(Identifier identifier) {
+        return TagFactory.ITEM.create(identifier);
     }
 
-    public static Tag.Identified<Item> makeItemTag(String namespace, String name) {
-        return makeItemTag(namespace + ":" + name);
+    public static Tag<Item> makeItemTag(String item) {
+        return makeItemTag(new Identifier(item));
+    }
+
+    public static Tag<Item> makeItemTag(String namespace, String item) {
+        return makeItemTag(new Identifier(namespace, item));
     }
 
     public static void assignItemTag(Tag.Identified<Item> tag, ItemConvertible... items) {
