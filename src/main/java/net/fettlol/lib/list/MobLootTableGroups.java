@@ -1,5 +1,6 @@
 package net.fettlol.lib.list;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class MobLootTableGroups {
@@ -18,18 +19,18 @@ public class MobLootTableGroups {
     public static final List<String> ZOMBIE;
 
     static {
-        DROWNED = List.of("minecraft:entities/drowned");
-        ENDERMAN = List.of("minecraft:entities/enderman");
-        ENDER_DRAGON = List.of("minecraft:entities/ender_dragon");
-        EVOKER = List.of("minecraft:entities/evoker");
-        GUARDIAN = List.of("minecraft:entities/guardian", "minecraft:entities/elder_guardian");
-        HUSK = List.of("minecraft:entities/husk");
-        PHANTOM = List.of("minecraft:entities/phantom");
-        SHULKER = List.of("minecraft:entities/shulker");
-        STRAY = List.of("minecraft:entities/stray");
-        WITCH = List.of("minecraft:entities/witch");
-        WITHER_SKELETON = List.of("minecraft:entities/wither_skeleton");
-        ZOMBIE = List.of("minecraft:entities/zombie");
+        DROWNED = Arrays.asList("minecraft:entities/drowned");
+        ENDERMAN = Arrays.asList("minecraft:entities/enderman");
+        ENDER_DRAGON = Arrays.asList("minecraft:entities/ender_dragon");
+        EVOKER = Arrays.asList("minecraft:entities/evoker");
+        GUARDIAN = Arrays.asList("minecraft:entities/guardian", "minecraft:entities/elder_guardian");
+        HUSK = Arrays.asList("minecraft:entities/husk");
+        PHANTOM = Arrays.asList("minecraft:entities/phantom");
+        SHULKER = Arrays.asList("minecraft:entities/shulker");
+        STRAY = Arrays.asList("minecraft:entities/stray");
+        WITCH = Arrays.asList("minecraft:entities/witch");
+        WITHER_SKELETON = Arrays.asList("minecraft:entities/wither_skeleton");
+        ZOMBIE = Arrays.asList("minecraft:entities/zombie");
     }
 
 }
