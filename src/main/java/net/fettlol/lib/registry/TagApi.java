@@ -7,6 +7,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.lwjgl.system.CallbackI;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,16 +18,16 @@ public class TagApi {
 
     public static final Map<Identifier, Set<Identifier>> FETTLOL_ITEM_TAGS = new HashMap<>();
 
-    public static Tag<Item> makeItemTag(Identifier identifier) {
+    public static Tag.Identified<Item> makeItemTag(Identifier identifier) {
         return TagFactory.ITEM.create(identifier);
     }
 
-    public static Tag<Item> makeItemTag(String item) {
-        return makeItemTag(new Identifier(item));
+    public static Tag.Identified<Item> makeItemTag(String name) {
+        return makeItemTag(new Identifier(name));
     }
 
-    public static Tag<Item> makeItemTag(String namespace, String item) {
-        return makeItemTag(new Identifier(namespace, item));
+    public static Tag.Identified<Item> makeItemTag(String namespace, String name) {
+        return makeItemTag(new Identifier(namespace, name));
     }
 
     public static void assignItemTag(Tag.Identified<Item> tag, ItemConvertible... items) {
