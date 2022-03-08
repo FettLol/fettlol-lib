@@ -8,7 +8,7 @@ public class BlockHelper {
 
     public static boolean isFlower(Block block) {
         return blockIsNotWitherRose(block)
-            && (BlockTags.SMALL_FLOWERS.contains(block) || BlockTags.TALL_FLOWERS.contains(block));
+            && (block.getDefaultState().isIn(BlockTags.SMALL_FLOWERS) || block.getDefaultState().isIn(BlockTags.TALL_FLOWERS));
     }
 
     private static boolean blockIsNotWitherRose(Block block) {

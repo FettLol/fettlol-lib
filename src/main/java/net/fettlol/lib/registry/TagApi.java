@@ -1,13 +1,11 @@
 package net.fettlol.lib.registry;
 
 import com.google.common.collect.ImmutableMap;
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
-import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.lwjgl.system.CallbackI;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -18,20 +16,20 @@ public class TagApi {
 
     public static final Map<Identifier, Set<Identifier>> FETTLOL_ITEM_TAGS = new HashMap<>();
 
-    public static Tag.Identified<Item> makeItemTag(Identifier identifier) {
-        return TagFactory.ITEM.create(identifier);
+    public static TagKey<Item> makeItemTag(Identifier identifier) {
+        return TagKey.of(Registry.ITEM_KEY, identifier);
     }
 
-    public static Tag.Identified<Item> makeItemTag(String name) {
+    public static TagKey<Item> makeItemTag(String name) {
         return makeItemTag(new Identifier(name));
     }
 
-    public static Tag.Identified<Item> makeItemTag(String namespace, String name) {
+    public static TagKey<Item> makeItemTag(String namespace, String name) {
         return makeItemTag(new Identifier(namespace, name));
     }
 
-    public static void assignItemTag(Tag.Identified<Item> tag, ItemConvertible... items) {
-        Identifier tagId = tag.getId();
+    public static void assignItemTag(TagKey<Item> tag, ItemConvertible... items) {
+        Identifier tagId = tag.id();
         Set<Identifier> set = FETTLOL_ITEM_TAGS.computeIfAbsent(tagId, k -> new HashSet<>());
 
         for (ItemConvertible item : items) {
@@ -42,7 +40,7 @@ public class TagApi {
         }
     }
 
-    public static void assignItemTag(Tag.Identified<Item> itemTag, String namespace, String item) {
+    public static void assignItemTag(TagKey<Item> itemTag, String namespace, String item) {
         assignItemTag(itemTag, Registry.ITEM.get(new Identifier(namespace, item)));
     }
 
