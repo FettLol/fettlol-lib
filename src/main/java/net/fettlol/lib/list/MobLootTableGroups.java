@@ -13,6 +13,7 @@ public class MobLootTableGroups {
     public static final List<String> HUSK;
     public static final List<String> PHANTOM;
     public static final List<String> SHULKER;
+    public static final List<String> SKELETON;
     public static final List<String> STRAY;
     public static final List<String> WITCH;
     public static final List<String> WITHER_SKELETON;
@@ -27,6 +28,7 @@ public class MobLootTableGroups {
         HUSK = Arrays.asList("minecraft:entities/husk");
         PHANTOM = Arrays.asList("minecraft:entities/phantom");
         SHULKER = Arrays.asList("minecraft:entities/shulker");
+        SKELETON = Arrays.asList("minecraft:entities/skeleton");
         STRAY = Arrays.asList("minecraft:entities/stray");
         WITCH = Arrays.asList("minecraft:entities/witch");
         WITHER_SKELETON = Arrays.asList("minecraft:entities/wither_skeleton");
