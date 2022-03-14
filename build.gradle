@@ -14,25 +14,12 @@ configurations {
     extraLibs
 }
 
-repositories {
-    maven {
-        name = "Cotton"
-        url = "https://server.bbkr.space/artifactory/libs-release"
-    }
-}
-
 dependencies {
     // Minecraft and Fabric
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
-    // Cotton
-    include modApi("io.github.cottonmc.cotton:cotton-datapack:${project.cotton_datapack_version}")
-    include modApi("io.github.cottonmc.cotton:cotton-config:${project.cotton_config_version}")
-    include modApi("io.github.cottonmc.cotton:cotton-logging:${project.cotton_logging_version}")
-    modApi("io.github.cottonmc:Jankson-Fabric:${project.jankson_version}")
 }
 
 processResources {
