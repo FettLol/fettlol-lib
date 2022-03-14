@@ -3,8 +3,6 @@ package net.fettlol.lib.list;
 import net.fettlol.lib.registry.TagApi;
 import net.minecraft.item.Item;
 import net.minecraft.tag.TagKey;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class Tags {
     public static final TagKey<Item> AE2_DUSTS;

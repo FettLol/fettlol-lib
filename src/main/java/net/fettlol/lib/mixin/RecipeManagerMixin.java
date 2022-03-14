@@ -2,7 +2,7 @@ package net.fettlol.lib.mixin;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import net.fettlol.lib.registry.RecipeApi;
+import net.fettlol.lib.implementation.RecipeImpl;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
@@ -23,8 +23,8 @@ public class RecipeManagerMixin {
     @ModifyVariable(method = "apply(Ljava/util/Map;Lnet/minecraft/resource/ResourceManager;Lnet/minecraft/util/profiler/Profiler;)V", at = @At("HEAD"), ordinal = 0, argsOnly = true)
     protected Map<Identifier, JsonElement> filterRecipes(Map<Identifier, JsonElement> recipes) {
         return recipes.entrySet().stream()
-                .filter(entry -> !RecipeApi.blockedRecipes.contains(entry.getKey()))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+            .filter(entry -> !RecipeImpl.blockedRecipes.contains(entry.getKey()))
+            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     @Inject(method = "apply", at = @At("HEAD"))
@@ -34,7 +34,7 @@ public class RecipeManagerMixin {
         Profiler profiler,
         CallbackInfo callbackInfo
     ) {
-        RecipeApi.FETTLOL_RECIPES.forEach((Identifier identifier, JsonObject object) -> {
+        RecipeImpl.addedRecipes.forEach((Identifier identifier, JsonObject object) -> {
             addRecipe(map, identifier, object);
         });
     }
