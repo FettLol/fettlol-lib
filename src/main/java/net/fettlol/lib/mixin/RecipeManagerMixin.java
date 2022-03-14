@@ -10,12 +10,22 @@ import net.minecraft.util.profiler.Profiler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Mixin(RecipeManager.class)
 public class RecipeManagerMixin {
+
+    // remove recipes before they are processed
+    @ModifyVariable(method = "apply(Ljava/util/Map;Lnet/minecraft/resource/ResourceManager;Lnet/minecraft/util/profiler/Profiler;)V", at = @At("HEAD"), ordinal = 0, argsOnly = true)
+    protected Map<Identifier, JsonElement> filterRecipes(Map<Identifier, JsonElement> recipes) {
+        return recipes.entrySet().stream()
+                .filter(entry -> !RecipeApi.blockedRecipes.contains(entry.getKey()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
 
     @Inject(method = "apply", at = @At("HEAD"))
     public void applyFettlolRecipes(
