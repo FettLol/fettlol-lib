@@ -44,6 +44,7 @@ public class ChestLootTableGroups {
 
         BURIED_TREASURE_CHESTS = Arrays.asList(
             LootTables.BURIED_TREASURE_CHEST.toString(),
+            "biomemakeover:mansion/dungeon_good",
             "byg:chests/buried_treasure"
         );
 
@@ -54,7 +55,8 @@ public class ChestLootTableGroups {
 
         END_ENDGAME_CHESTS = Arrays.asList(
             LootTables.END_CITY_TREASURE_CHEST.toString(),
-            "byg:chests/end_city_treasure"
+            "byg:chests/end_city_treasure",
+            "spectrum:ancient_ruins_main"
         );
 
         GRAVEYARD_LOOT_CHESTS = Arrays.asList(
@@ -80,6 +82,11 @@ public class ChestLootTableGroups {
             LootTables.BASTION_HOGLIN_STABLE_CHEST.toString(),
             LootTables.BASTION_OTHER_CHEST.toString(),
             LootTables.NETHER_BRIDGE_CHEST.toString(),
+            "repurposed_structures:chests/bastions/underground/bridge",
+            "repurposed_structures:chests/bastions/underground/other",
+            "repurposed_structures:chests/bastions/underground/skeleton_horse_stable",
+            "repurposed_structures:chests/bastions/underground/treasure",
+            "repurposed_structures:chests/cities/nether",
             "byg:chest/nether_bridge"
         );
 
@@ -92,12 +99,15 @@ public class ChestLootTableGroups {
         );
 
         RUINED_PORTAL_CHESTS = Arrays.asList(
-            LootTables.RUINED_PORTAL_CHEST.toString()
+            LootTables.RUINED_PORTAL_CHEST.toString(),
+            "repurposed_structures:chests/ruined_portals/end/large_portal",
+            "repurposed_structures:chests/ruined_portals/end/small_portal"
         );
 
         SHIPWRECK_CHESTS = Arrays.asList(
             LootTables.SHIPWRECK_SUPPLY_CHEST.toString(),
             LootTables.SHIPWRECK_TREASURE_CHEST.toString(),
+            "biomemakeover:sunken_ruin",
             "repurposed_structures:chests/shipwrecks/crimson/treasure",
             "repurposed_structures:chests/shipwrecks/end/treasure",
             "repurposed_structures:chests/shipwrecks/nether_bricks/treasure",
@@ -108,8 +118,10 @@ public class ChestLootTableGroups {
         SIMPLE_DUNGEON_CHESTS = Arrays.asList(
             LootTables.SIMPLE_DUNGEON_CHEST.toString(),
             "byg:chests/simple_dungeon",
+            "spectrum:chests/ancient_ruins_small",
             "repurposed_structures:chests/dungeons/badlands",
             "repurposed_structures:chests/dungeons/dark_forest",
+            "repurposed_structures:chests/dungeons/deep",
             "repurposed_structures:chests/dungeons/desert",
             "repurposed_structures:chests/dungeons/icy",
             "repurposed_structures:chests/dungeons/jungle",
@@ -149,6 +161,14 @@ public class ChestLootTableGroups {
             "byg:chests/village/village_tropics_house",
             "byg:chests/village/village_skyris_house",
             "stoneholm:bedroom",
+            "kaisyn:village/village_badlands_house",
+            "kaisyn:village/village_flower_forest_house",
+            "kaisyn:village/village_jungle_house",
+            "kaisyn:village/village_meadow_house",
+            "kaisyn:village/village_mushroom_house",
+            "kaisyn:village/village_old_growth_taiga_house",
+            "kaisyn:village/village_sparse_jungle_house",
+            "kaisyn:village/village_swamp_house",
             "repurposed_structures:chests/villages/badlands_house",
             "repurposed_structures:chests/villages/birch_house",
             "repurposed_structures:chests/villages/crimson_house",
